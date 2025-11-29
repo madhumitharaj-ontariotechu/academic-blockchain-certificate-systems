@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head><title>Create Certificate</title></head>
+<body>
+<h2>Create Certificate (client)</h2>
+<form action="/generate/certificate" method="post">
+  <label>Issuer Public Key (hex)</label><br><textarea name="issuer_public_key" rows="5" cols="80"></textarea><br>
+  <label>Issuer Private Key (hex)</label><br><textarea name="issuer_private_key" rows="5" cols="80"></textarea><br>
+  <label>Student Name</label><br><input name="student_name"><br>
+  <label>Student ID</label><br><input name="student_id"><br>
+  <label>Degree</label><br><input name="degree"><br>
+  <label>Year</label><br><input name="year"><br>
+  <label>University</label><br><input name="university"><br>
+  <label>Certificate Hash (sha256 hex)</label><br><input name="certificate_hash"><br>
+  <button type="submit">Sign & Submit Certificate</button>
+</form>
+<p>Note: The form will POST to the blockchain server's /certificates/new endpoint.</p>
+</body>
+</html>

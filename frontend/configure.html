@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+  <title>Configure Nodes</title>
+</head>
+<body>
+  <h2>Register Nodes (server)</h2>
+
+  <form action="/nodes/register" method="post">
+    <label>Node addresses (comma separated):</label><br>
+    <input name="nodes" size="80" placeholder="127.0.0.1:5002,127.0.0.1:5003"><br><br>
+    <button type="submit">Register Nodes</button>
+  </form>
+
+  <h3>Resolve Conflicts</h3>
+  <p>
+    <a href="/nodes/resolve">Synchronize chain via consensus</a>
+  </p>
+
+</body>
+</html>

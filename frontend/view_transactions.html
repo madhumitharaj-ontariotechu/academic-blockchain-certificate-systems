@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head><title>View Transactions</title></head>
+<body>
+<h2>View Latest Transactions</h2>
+<button onclick="fetchChain()">Load chain</button>
+<pre id="out"></pre>
+<script>
+async function fetchChain() {
+  const r = await fetch('http://127.0.0.1:5001/chain');
+  const data = await r.json();
+  document.getElementById('out').innerText = JSON.stringify(data, null, 2);
+}
+</script>
+</body>
+</html>

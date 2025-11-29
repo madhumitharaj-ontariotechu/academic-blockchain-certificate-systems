@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head><title>Make Transaction</title></head>
+<body>
+<h2>Make Transfer Transaction (client)</h2>
+<form action="/generate/transaction" method="post">
+  <label>Sender Public Key (hex)</label><br><textarea name="sender_public_key" rows="5" cols="80"></textarea><br>
+  <label>Sender Private Key (hex)</label><br><textarea name="sender_private_key" rows="5" cols="80"></textarea><br>
+  <label>Recipient Public Key (hex)</label><br><textarea name="recipient_public_key" rows="5" cols="80"></textarea><br>
+  <label>Amount</label><br><input name="amount" value="1"><br>
+  <label>Auto post to server?</label>
+  <select name="post_to_server"><option value="no">No</option><option value="yes">Yes</option></select><br><br>
+  <button type="submit">Sign & (optionally) Post</button>
+</form>
+</body>
+</html>
